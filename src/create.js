@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export default class Form extends React.Component {
+export default class create extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -48,7 +48,7 @@ export default class Form extends React.Component {
         })
         .then(response => alert('Thank you for the response'));
       }
-
+      
     render() {
         return (
             <form onSubmit={this.submitHandler}>
