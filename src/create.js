@@ -51,8 +51,9 @@ export default class create extends React.Component {
       
     render() {
         return (
+          <div align='center'>
             <form onSubmit={this.submitHandler}>
-              <h1>Hello</h1>
+              <h2>Hello</h2>
               <p>Enter your name:</p>
               <input
                 type="text"
@@ -82,6 +83,7 @@ export default class create extends React.Component {
               <input type='submit'/>
               </p>
             </form>
+        </div>
           );
     }
 

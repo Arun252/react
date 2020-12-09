@@ -40,17 +40,20 @@ export default class balance extends React.Component {
         axios.get('http://localhost:80/customer/balance?accid='+this.state.accid)
         .then(response => {
           console.log(response);
+          alert('Here is your balance!');
           this.setState({submitted:true,balance:response.data});
       });
     }
-      
+     
     accidchangehandler= (event) => {
         this.setState({accid: event.target.value});
       }
+
     render() {
-        return (<div>
+        return (
+        <div align='center'>
             <form onSubmit={this.submitHandler}>
-              <h1>Hello</h1>
+              <h2>Hello</h2>
               <p>Enter your accid:</p>
               <input
                 type="text"
@@ -69,8 +72,8 @@ export default class balance extends React.Component {
 function Customer(props) {
     console.log(props);
     return(
-      <div>
-        <p>Balance:{props.value.balance}</p>
+      <div>    
+        <p>Balance: {props.value.balance}</p>
       </div>
     )
 }
