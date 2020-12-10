@@ -37,7 +37,7 @@ export default class balance extends React.Component {
   
       submitHandler = (event) => {
         event.preventDefault();
-        axios.get('http://localhost:80/customer/balance?accid='+this.state.accid)
+        axios.get('http://localhost:18080/customer/balance?accid='+this.state.accid)
         .then(response => {
           console.log(response);
           alert('Here is your balance!');
@@ -51,7 +51,7 @@ export default class balance extends React.Component {
 
     render() {
         return (
-        <div align='center'>
+        <div align='left'>
             <form onSubmit={this.submitHandler}>
               <h2>Hello</h2>
               <p>Enter your accid:</p>

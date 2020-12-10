@@ -25,7 +25,7 @@ export default class withdraw extends React.Component {
 
     submitHandler = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:80/customer/withdraw/', {
+        axios.post('http://localhost:18080/customer/withdraw/', {
           accid: this.state.accid,
           amount: this.state.amount,
           date: this.state.date
@@ -38,7 +38,7 @@ export default class withdraw extends React.Component {
       
     render() {
         return (
-          <div align='center'>
+          <div align='left'>
             <form onSubmit={this.submitHandler}>
               <h2>Hello</h2>
               <p>Enter your accid:</p>

@@ -1,6 +1,10 @@
+
 body {
   font: 16px "Calibri", Futura, sans-serif;
   margin: 30px;
+  background-image: url("4365.jpg");
+  background-size: 98%;
+  background-position: right;
 }
 
 ol, ul {
@@ -50,7 +54,7 @@ ol, ul {
 }
 
 .myDiv {
-  border: 3.5px outset red;
-  background-color: lightblue;    
-  text-align: center;
+  border: 3px outset rgb(12, 12, 12);
+  /* background-color: lightblue;     */
+  text-align: left;
 }

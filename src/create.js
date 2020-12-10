@@ -35,7 +35,7 @@ export default class create extends React.Component {
 
       submitHandler = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:80/customer/create', {
+        axios.post('http://localhost:18080/customer/create', {
           details: {
             contact: this.state.contact,
             address: this.state.address,
@@ -51,7 +51,7 @@ export default class create extends React.Component {
       
     render() {
         return (
-          <div align='center'>
+          <div align='left'>
             <form onSubmit={this.submitHandler}>
               <h2>Hello</h2>
               <p>Enter your name:</p>
@@ -74,11 +74,13 @@ export default class create extends React.Component {
                 type="text"
                 onChange={this.accountnoChangeHandler}
               />
-              <p>Enter your acctype:</p>
-              <input
-                type="text"
-                onChange={this.acctypeChangeHandler}
-              />
+              <p>Enter account type:</p>
+              <p onChange={this.acctypeChangeHandler}>
+                <select value = {this.state.acctype}>
+                  <option value="Null">Select</option>
+                  <option value="SAVINGS">Savings</option>
+                  <option value="FIXEDDEPOSIT">Fixed Deposit</option>
+                </select></p>
               <p>
               <input type='submit'/>
               </p>

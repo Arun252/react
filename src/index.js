@@ -34,7 +34,7 @@ function getdetails() {
 function Default() {
   return(<Router>
   <div> 
-     <h1 align= 'center'>BANK APPLICATION</h1>
+     <h1 align= 'left'><strong>BANK APPLICATION</strong></h1>
       <div className='myDiv'>
         <Link to="/create" style={{textDecoration: 'none',color: "black"}}>
           <button type="button">
